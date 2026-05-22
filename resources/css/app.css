@@ -1,0 +1,33 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* Dark Futuristic Theme Utilities */
+@layer components {
+    .nav-link {
+        @apply flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-slate-100 hover:bg-[#2D3748]/50 transition-all text-sm;
+    }
+    .nav-link.active {
+        @apply text-cyan-400 bg-cyan-400/10 border border-cyan-400/20;
+    }
+    .card {
+        @apply bg-[#1E2736] border border-[#2D3748] rounded-2xl;
+    }
+    .input-dark {
+        @apply w-full bg-[#0F1219] border border-[#2D3748] rounded-lg px-4 py-2.5 text-slate-100 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition;
+    }
+    .btn-primary {
+        @apply bg-cyan-400 text-[#0F1219] font-semibold py-2.5 px-4 rounded-lg hover:bg-cyan-300 transition disabled:opacity-50;
+    }
+    .btn-secondary {
+        @apply border border-[#2D3748] text-slate-300 py-2.5 px-4 rounded-lg hover:bg-[#2D3748] transition;
+    }
+}
